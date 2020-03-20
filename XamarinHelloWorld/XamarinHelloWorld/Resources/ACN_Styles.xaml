@@ -1,0 +1,564 @@
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design">
+    
+</ResourceDictionary>
+    <!--<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:Double x:Key="PAGE_HEIGHT">1920</system:Double>
+    <system:Double x:Key="PAGE_WIDTH">1080</system:Double>
+    <system:String x:Key="DATA_FAQ_BUTTON_WIDTH">255</system:String>
+
+    <ScaleTransform x:Key="ScaleUp2X" ScaleX="2" ScaleY="2" />
+
+    --><!--Fonts--><!--
+    <FontFamily x:Key="PrimaryFont">/bermuda-vend;component/assets/ACN/Fonts/#Graphik App</FontFamily>
+    <FontFamily x:Key="SecondaryFont">/bermuda-vend;component/assets/ACN/Fonts/#Graphik App</FontFamily>
+    <FontFamily x:Key="Title1Font">/bermuda-vend;component/assets/ACN/Fonts/#Graphik App</FontFamily>
+    <FontFamily x:Key="Title2Font">/bermuda-vend;component/assets/MCBC/Fonts/#Graphik App</FontFamily>
+    <FontFamily x:Key="CaptionFont">/bermuda-vend;component/assets/MCBC/Fonts/#Graphik App</FontFamily>
+    --><!--Colors  --><!--
+    <Color x:Key="PrimaryPurple">#a100ff</Color>
+    <Color x:Key="PrimaryPurplePressed">#460073</Color>
+    <Color x:Key="Accent">#7500c0</Color>
+    <Color x:Key="SecondaryPurple">#7500c0</Color>
+    <Color x:Key="SecondaryPurplePressed">#7500c0</Color>
+    <Color x:Key="TertiaryColor">#004dff</Color>
+    <Color x:Key="MediumGrey">#5a5a5a</Color>
+    <Color x:Key="DisabledGrey">#969696</Color>
+    <Color x:Key="DisabledButtonTextColor">#EAEAEA</Color>
+    <Color x:Key="SecondaryDisabledGrey">#1A5A5A5A</Color>
+    <Color x:Key="ArrowPurple">#3F0F6E</Color>
+    <Color x:Key="BackgroundGrey">#f4f4f6</Color>
+    <Color x:Key="White">#ffffff</Color>
+    <Color x:Key="LightBlue">#008eff</Color>
+    <Color x:Key="Black">#000000</Color>
+    <Color x:Key="DarkGrey">#2f2f30</Color>
+    <Color x:Key="PageBackground.Color">White</Color>
+    <Color x:Key="PageBackground.Gradient.Bottom">#FFDCDCDC</Color>
+    <Color x:Key="PageBackground.Gradient.Top">#FFE8E8EB</Color>
+    <Color x:Key="FAQClosePanelBackground">#BFFFFFFF</Color>
+
+    --><!--<SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}" />
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryPurple}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryPurple}" />
+    <SolidColorBrush x:Key="CountdownBrush" Color="{StaticResource TertiaryColor}" />
+    <SolidColorBrush x:Key="InfoBrush" Color="{StaticResource LightBlue}" />
+    <SolidColorBrush x:Key="ModalBorderBrush" Color="#B3969696" />
+    <SolidColorBrush x:Key="LightGreyBrush" Color="{StaticResource DisabledGrey}" />
+    <SolidColorBrush x:Key="DisabledSecondaryBrush" Color="{StaticResource SecondaryDisabledGrey}" />
+    <SolidColorBrush x:Key="DisabledButtonTextBrush" Color="{StaticResource DisabledButtonTextColor}" />
+    <SolidColorBrush x:Key="PrimaryPressedBrush" Color="{StaticResource PrimaryPurplePressed}" />
+    <SolidColorBrush x:Key="SecondaryPressedBrush" Color="{StaticResource SecondaryPurple}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="SecondaryBackgroundBrush" Color="{StaticResource SecondaryPurple}" Opacity="0.05" />
+    <SolidColorBrush x:Key="MustangLightsBrush" Color="{StaticResource ArrowPurple}"/>
+    <SolidColorBrush x:Key="BackgroundGreyBrush" Color="{StaticResource BackgroundGrey}" />
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}" />
+    <SolidColorBrush x:Key="MediumGreyBrush" Color="{StaticResource MediumGrey}" />
+    <SolidColorBrush x:Key="DarkGreyBrush" Color="{StaticResource DarkGrey}" />
+    <SolidColorBrush x:Key="PageBackground.Brush" Color="{StaticResource PageBackground.Color}" />
+    <system:Double x:Key="CountDownAssetOpacity">.80</system:Double>
+    <SolidColorBrush x:Key="FAQClosePanelBackgroundBrush" Color="{StaticResource FAQClosePanelBackground}" />--><!--
+
+    <Brush x:Key="InfoWhiteBrush">White</Brush>
+
+    <DrawingBrush x:Key="CircleMask" Stretch="None" x:Name="CircleMask">
+        <DrawingBrush.Drawing>
+            <GeometryDrawing>
+                <GeometryDrawing.Brush>
+                    <SolidColorBrush Color="{DynamicResource PageBackground.Color}"  />
+                </GeometryDrawing.Brush>
+                <GeometryDrawing.Geometry >
+                    <EllipseGeometry
+                            Center="270,480"
+                            RadiusX="316"
+                            RadiusY="316" />
+                </GeometryDrawing.Geometry>
+                <GeometryDrawing.Pen>
+                    <Pen Thickness="0" Brush="Transparent" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DropShadowEffect x:Key="Blur10Black" BlurRadius="20" ShadowDepth="0" Color="Black" />
+
+    <Style x:Key="CountDownRingStyle"
+               TargetType="{x:Type Image}">
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="Height" Value="170"/>
+        <Setter Property="Margin" Value="0,52.5"/>
+    </Style>
+
+    <Style x:Key="CirclularImageStyle"
+               TargetType="{x:Type Image}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="1130"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="CountdownFlash"
+               TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="{StaticResource AllWhite}"/>
+        <Setter Property="Width" Value="1080"/>
+        <Setter Property="Height" Value="1920"/>
+    </Style>
+
+    <LinearGradientBrush x:Key="Textbox.Soldout.Background" StartPoint="0,1" EndPoint="1,.27" >
+        <GradientStop Color="#008eff" Offset="0"/>
+        <GradientStop Color="#004dff" Offset="0.34"/>
+        <GradientStop Color="#7500c0" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LowSplitBackground" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+        <GradientStop Color="{StaticResource PageBackground.Color}" Offset="0.814"/>
+        <GradientStop Color="{StaticResource BackgroundGrey}" Offset="0.8141"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="Template3BackgroundBrush"
+        EndPoint="0.5,1" 
+        MappingMode="RelativeToBoundingBox" 
+        StartPoint="0.5,0"
+        >
+        <GradientStop Color="{StaticResource PageBackground.Color}" Offset="0.629"/>
+        <GradientStop Color="{StaticResource BackgroundGrey}" Offset="0.63"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DispensedBackgroundBrush"
+        EndPoint="0.5,1" 
+        MappingMode="RelativeToBoundingBox" 
+        StartPoint="0.5,0"
+        >
+        <GradientStop Color="{StaticResource PageBackground.Color}" Offset="0.629"/>
+        <GradientStop Color="{StaticResource BackgroundGrey}" Offset="0.63"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="TitleStyle"
+               TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+        <Setter Property="TextDecorations" Value="{x:Null}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PrimaryFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="76"/>
+    </Style>
+    <Style x:Key="SubTitleStyle"
+               TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextDecorations" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource DarkGreyBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PrimaryFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="36"/>
+    </Style>
+    <Style x:Key="IntermediateTitleStyle"
+               TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextDecorations" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource DarkGreyBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="36"/>
+    </Style>
+    <Style x:Key="OrderTitleStyle"
+               TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextDecorations" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource DarkGreyBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="36"/>
+    </Style>
+
+    --><!-- Text Styles from Zeplin Style Guide--><!--
+    <Style x:Key="HeadlineStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="36"/>
+    </Style>
+
+    <Style x:Key="OfferingHeadline"
+           TargetType="TextBlock" BasedOn="{StaticResource HeadlineStyle}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="38"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkGreyBrush}" />
+    </Style>
+    <Style x:Key="CaptionStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource MediumGreyBrush}"/>
+    </Style>
+
+    --><!--Text Styles--><!--
+    <Style x:Key="TextStyleBase"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+    </Style>
+
+    <Style x:Key="Body"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TextStyleBase}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="29"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="MaxWidth" Value="802"/>
+        <Setter Property="LineHeight" Value="36"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkGreyBrush}"/>
+    </Style>
+
+    <Style x:Key="InverseBody"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource Body}">
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+    </Style>
+
+    <Style x:Key="Headline"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TextStyleBase}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="38"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkGreyBrush}"/>
+    </Style>
+
+    --><!--config view --><!--
+    <Style x:Key="BodyStyle.TabItem"
+           TargetType="{x:Type TabItem}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="29"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <Style x:Key="TitleStyleBase"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TextStyleBase}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
+    </Style>
+
+    <Style x:Key="ShrinkableStartTitle" TargetType="TextBox" >
+        <Setter Property="FontFamily" Value="{DynamicResource PrimaryFont}"/>
+        <Setter Property="FontWeight" Value="ExtraBold"/>
+        <Setter Property="FontSize" Value="67"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Viewbox StretchDirection="DownOnly" Stretch="Uniform">
+                        <ContentPresenter Content="{TemplateBinding Text}"/>
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DisabledFont" TargetType="{x:Type TextBlock}">
+        <Setter Property="Opacity" Value="0.8"/>
+    </Style>
+
+    <Style x:Key="StartSubTitle"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TitleStyleBase}">
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="LineHeight" Value="60"/>
+    </Style>
+
+    <Style x:Key="Title2"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TitleStyleBase}">
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="LineHeight" Value="60"/>
+    </Style>
+
+    <Style x:Key="InverseTitle2"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TitleStyleBase}">
+        <Setter Property="FontWeight" Value="ExtraBold" />
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="LineHeight" Value="60"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+    </Style>
+
+    <Style x:Key="InverseProductReadyTitle2"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TitleStyleBase}">
+        <Setter Property="FontSize" Value="57"/>
+        <Setter Property="LineHeight" Value="60"/>
+    </Style>
+
+    <Style x:Key="ProductReadyBody2"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TextStyleBase}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="29"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="MaxWidth" Value="802"/>
+        <Setter Property="LineHeight" Value="36"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkGreyBrush}"/>
+    </Style>
+
+    <Style x:Key="ProductReadyTitle2"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TitleStyleBase}">
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="LineHeight" Value="66"/>
+    </Style>
+
+    <Style x:Key="Caption"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TextStyleBase}">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="{StaticResource MediumGreyBrush}"/>
+    </Style>
+
+    <Style x:Key="CountdownStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource InfoWhiteBrush}" />
+        <Setter Property="FontFamily" Value="{StaticResource Title1Font}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="210"/>
+        <Setter Property="Margin" Value="0,-45,0,0" />
+    </Style>
+
+    <Style x:Key="LoadingCountdownStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource InfoWhiteBrush}" />
+        <Setter Property="FontFamily" Value="{StaticResource CaptionFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="70"/>
+        <Setter Property="Opacity" Value="{StaticResource CountDownAssetOpacity}"/>
+    </Style>
+
+    <Style x:Key="CountdownCompleteStyle"
+           TargetType="Ellipse">
+        <Setter Property="Fill" Value="{StaticResource CountdownBrush}"/>
+        <Setter Property="Width" Value="325"/>
+        <Setter Property="Height" Value="325"/>
+    </Style>
+
+    --><!--Button Styles--><!--
+    <Style x:Key="PrimaryButton"
+           TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="91"/>
+        <Setter Property="MinWidth" Value="450"/>
+        <Setter Property="FontSize" Value="34"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource White}"/>
+        <Setter Property="Background" Value="{StaticResource PrimaryPurple}"/>
+    </Style>
+
+    <Style x:Key="ServiceButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource PrimaryButton}">
+        <Setter Property="Margin" Value="50,10,0,10" />
+        <Setter Property="BorderBrush" Value="White" />
+    </Style>
+
+    <Style x:Key="SecondaryButton"
+           TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="72"/>
+        <Setter Property="MinWidth" Value="256"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="27"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{StaticResource SecondaryBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="border"
+                        CornerRadius="34"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="3">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Margin="0,0,0,2">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource SecondaryPressedBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource SecondaryBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource DisabledSecondaryBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource LightGreyBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource LightGreyBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="FAQModalButton"
+           TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="48"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource MediumGreyBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="border"
+                        CornerRadius="23"
+                        BorderBrush="{StaticResource LightGreyBrush}"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="2">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Margin="0,0,0,2">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource InfoBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource InfoBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{StaticResource LightGreyBrush}"/>
+                            <Setter Property="Background" Value="{StaticResource InfoBrush}" />
+                            <Setter Property="BorderBrush" Value="{StaticResource LightGreyBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TotalTableRowStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{StaticResource DarkGreyBrush}" />
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="29"/>
+    </Style>
+    <Style x:Key="TotalPriceStyle"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TotalTableRowStyle}">
+        <Setter Property="Foreground" Value="{StaticResource DarkGreyBrush}" />
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="LineHeight" Value="36"/>
+    </Style>
+    <Style x:Key="TotalPriceSubtitleStyle"
+               TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{DynamicResource WhiteBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PrimaryLightFont}"/>
+        <Setter Property="FontSize" Value="27"/>
+    </Style>
+
+    <Style x:Key="RoundedCornerLabelStyle" TargetType="Label">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Label}">
+                    <Border 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="{TemplateBinding Padding}" 
+                            SnapsToDevicePixels="true" 
+                            CornerRadius="14"
+                            >
+                        <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ProductLabelStyle" TargetType="Label" BasedOn="{StaticResource RoundedCornerLabelStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="MinWidth" Value="200"/>
+        <Setter Property="Padding" Value="20,0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="{StaticResource Title1Font}"/>
+        <Setter Property="FontSize" Value="29"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect
+                ShadowDepth="5"
+                Direction="1000"
+                Color="Black"
+                Opacity=".65"
+                BlurRadius="24"
+                />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+            x:Key="GlassImageStyle"
+            TargetType="{x:Type Image}"
+            >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsAvailable}" Value="false">
+                <Setter Property="Opacity" Value="0.6"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style
+            x:Key="SizeTextColorStyle"
+            TargetType="{x:Type TextBlock}"
+            BasedOn="{StaticResource TotalTableRowStyle}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsAvailable}" Value="false">
+                <Setter Property="Foreground" Value="{StaticResource MediumGreyBrush}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style
+            x:Key="PriceTextColorInlineStyle"
+            TargetType="{x:Type TextBlock}"
+            BasedOn="{StaticResource TotalPriceStyle}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsAvailable}" Value="false">
+                <Setter Property="Foreground" Value="{StaticResource MediumGreyBrush}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>-->

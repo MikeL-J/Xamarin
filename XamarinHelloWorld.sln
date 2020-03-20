@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinHelloWorld.Android",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinHelloWorld.iOS", "XamarinHelloWorld\XamarinHelloWorld.iOS\XamarinHelloWorld.iOS.csproj", "{35288F16-961D-47F8-884A-B84EDDE08C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinHelloWorld.Web", "XamarinHelloWorld\XamarinHelloWorld.Web\XamarinHelloWorld.Web.csproj", "{6359CE4C-3902-4AB3-8817-9EE573A7E353}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamarinHelloWorld.Web", "XamarinHelloWorld\XamarinHelloWorld.Web\XamarinHelloWorld.Web.csproj", "{6359CE4C-3902-4AB3-8817-9EE573A7E353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinHelloWorld", "XamarinHelloWorld\XamarinHelloWorld\XamarinHelloWorld.csproj", "{ED07BFEB-2E66-489D-9AEF-9E302C3B683F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamarinHelloWorld", "XamarinHelloWorld\XamarinHelloWorld\XamarinHelloWorld.csproj", "{ED07BFEB-2E66-489D-9AEF-9E302C3B683F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinClient", "XamarinClient\XamarinClient.csproj", "{6232E176-5117-44EA-A840-6AD068C9A3B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamarinClient", "XamarinClient\XamarinClient.csproj", "{6232E176-5117-44EA-A840-6AD068C9A3B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,8 +95,8 @@ Global
 		{ED07BFEB-2E66-489D-9AEF-9E302C3B683F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{ED07BFEB-2E66-489D-9AEF-9E302C3B683F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{ED07BFEB-2E66-489D-9AEF-9E302C3B683F}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|Any CPU.Build.0 = Debug|x64
 		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{6232E176-5117-44EA-A840-6AD068C9A3B5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU

@@ -24,7 +24,8 @@ namespace XamarinHelloWorld
                 DependencyService.Register<MockDataStore>();
             else
                 DependencyService.Register<AzureDataStore>();
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new NavigationPage (new LandingPage());
         }
 
         protected override void OnStart()

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinHelloWorld.Views.LandingPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="ix0_cc_insert.jpg"/>
+            <Entry 
+                Margin="0,30,0,0"
+                VerticalOptions="StartAndExpand"
+                HorizontalTextAlignment="Center"
+                Placeholder="Enter Your Name"
+                Text="{Binding Greeting}"
+                x:Name="NameEntry"/>
+            
+            <Button
+                x:Name="CheckScannerStatus"
+                HorizontalOptions="Center"
+                Margin="0,0,0,100"
+                CornerRadius="20"
+                HeightRequest="40"
+                WidthRequest="205"
+                FontAttributes="Bold"
+                FontSize="Body"
+                TextColor="White"
+                BackgroundColor="#a100ff"
+                Text="REGISTER"
+                Clicked="Button_Clicked"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
